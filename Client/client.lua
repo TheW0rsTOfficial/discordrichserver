@@ -22,5 +22,7 @@ end)
 
 RegisterNetEvent('checkplayer:client')
 AddEventHandler('checkplayer:client',function(playeron)
-    SetRichPresence(GetPlayerName(PlayerId()) .. " - ".. #playeron .. "/"..TheWorst.Discord.SlotFivem)
+	local playername = GetPlayerName(PlayerId())
+	local playeronline = #playeron
+    SetRichPresence(playername .. " - ".. playeronline .. "/"..TheWorst.Discord.SlotFivem)
 end)
